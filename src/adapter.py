@@ -66,6 +66,7 @@ class HuggingFacePipelineChatAdapter:
             model=model,
             tokenizer=tokenizer,
             max_new_tokens=max_new_tokens,
+            do_sample=False,
             return_full_text=False
         )
 
