@@ -54,7 +54,8 @@ The agent consists of **four core LLM nodes**:
 The **iteration node** increases the reasoning step counter, while **guard nodes** stop execution when the maximum iteration limit is reached.
 
 The full LangGraph graph is visualized below:
-![graph](figures/graph.png)
+
+![graph](figures/graph.svg)
 
 ## Implementation Details
 
@@ -75,6 +76,7 @@ I evaluated two open-weight instruction-tuned code models:
 2) `deepseek-ai/deepseek-coder-1.3b-instruct`
 
 The **pass@1** metric improves consistently as the number of reasoning iterations increases:
+
 ![eval](figures/acc.svg)
 
 This confirms that **iterative reflection** — even with small models — can significantly improve the agent’s code fixing capability.
