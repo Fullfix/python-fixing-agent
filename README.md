@@ -29,7 +29,7 @@ pip install langchain-core langgraph transformers datasets torch tqdm numpy
 And finally, run the evaluation:
 
 ```bash
-python src/main.py <model_name>
+python src/main.py <model_name> [options]
 ```
 
 Where <model_name> is the name of a hugging face model.
