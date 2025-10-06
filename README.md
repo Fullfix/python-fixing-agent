@@ -55,7 +55,8 @@ The **iteration node** increases the reasoning step counter, while **guard nodes
 
 The full LangGraph graph is visualized below:
 
-![graph](figures/graph.svg)
+<img src="figures/graph.svg" alt="Graph visualization" width="60%" />
+
 
 ## Implementation Details
 
