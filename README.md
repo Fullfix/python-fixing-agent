@@ -15,10 +15,21 @@ I didn't want to use ReAct-style agent, because it would probably struggle with 
 
 ## Usage
 
-To evaluate the agent and compute **pass@1** accuracy on HumanEvalFix, run:
+To evaluate the agent and compute **pass@1** metric (fraction of correctly fixed functions from the first try) on HumanEvalFix, first clone the repository:
+```bash
+git clone https://github.com/Fullfix/python-fixing-agent.git
+```
+
+Then, install all required libraries:
 
 ```bash
-python3 src/main.py <model_name>
+pip install langchain-core langgraph transformers datasets torch tqdm numpy
+```
+
+And finally, run the evaluation:
+
+```bash
+python src/main.py <model_name>
 ```
 
 Where <model_name> is the name of a hugging face model.
@@ -31,13 +42,13 @@ Optionally, you can specify:
 
 See all options with:
 ```bash
-python3 src/main.py -h
+python src/main.py -h
 ```
 
 Example (run the verbose no-reasoning agent on first 5 samples):
 
 ```bash
-python3 src/main.py unsloth/Qwen2.5-Coder-0.5B-Instruct -v --i 0 --ts 5
+python src/main.py unsloth/Qwen2.5-Coder-0.5B-Instruct -v --i 0 --ts 5
 ```
 
 ## Agent Architecture
