@@ -18,18 +18,19 @@ I didn't want to use ReAct-style agent, because it would probably struggle with 
 To evaluate the agent and compute **pass@1** metric (fraction of correctly fixed functions from the first try) on HumanEvalFix, first clone the repository:
 ```bash
 git clone https://github.com/Fullfix/python-fixing-agent.git
+cd python-fixing-agent
 ```
 
 Then, install all required libraries:
 
 ```bash
-pip install langchain-core langgraph transformers datasets torch tqdm numpy
+pip3 install langchain-core langgraph transformers datasets torch tqdm numpy accelerate
 ```
 
 And finally, run the evaluation:
 
 ```bash
-python src/main.py <model_name> [options]
+python3 src/main.py <model_name> [options]
 ```
 
 Where <model_name> is the name of a hugging face model.
@@ -42,13 +43,13 @@ Optionally, you can specify:
 
 See all options with:
 ```bash
-python src/main.py -h
+python3 src/main.py -h
 ```
 
 Example (run the verbose no-reasoning agent on first 5 samples):
 
 ```bash
-python src/main.py unsloth/Qwen2.5-Coder-0.5B-Instruct -v --i 0 --ts 5
+python3 src/main.py unsloth/Qwen2.5-Coder-0.5B-Instruct -v --i 0 --ts 5
 ```
 
 ## Agent Architecture
